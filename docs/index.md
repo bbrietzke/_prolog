@@ -30,4 +30,7 @@ popular languages out in the wild today.
 But does that means it's the best?
 
 ## Comparisons
+Lets stick with example of controlling heat for a closed-system with limited ventilation.  This could be the inside of a computer case or an industrial controller in a manufacturing plant.  
 
+With such a system you will have the device that is being monitored (i.e. processor or relay bank) along with a one or more
+temperature sensors, one or more fans, zero or more visual indicators and zero or more remote notifiers.
