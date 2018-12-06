@@ -2,3 +2,4 @@ site_name: _prolog
 theme: readthedocs
 nav:
   - home: index.md
+  - reference: reference.md
