@@ -23,7 +23,6 @@ Describes the internal representation for terms.  The Tags are used in the \ref 
 typedef enum  {
     STR,                        //!< Structure
     REF,                        //!< Reference
-    V                           //!< Value
 } TAGS;
 
 /*! 
@@ -56,6 +55,15 @@ typedef struct  {
     union memory_cell cells[MAX_HEAP];  //!<  elements saved in the current heap
 } HEAP;
 
+
+/*! 
+\struct REGISTERS
+
+Individual registers.
+\author Brian Brietzke
+\addtogroup M0
+\todo Actually implement the registers instead of just the index.
+*/
 typedef struct {
     int index;                           //!<  next available variable index
 } REGISTERS;

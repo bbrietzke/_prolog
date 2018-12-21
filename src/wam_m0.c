@@ -9,13 +9,14 @@ Contains the WAM instructions for MO abstract machine.
 
 
 /*! 
-\fn put_structure(char *funcName, int arity, int variableIdx)
+\fn put_structure(HEAP* h, char *funcName, int arity, int variableIdx)
 \author Brian Brietzke
 \addtogroup M0
 \brief Push a new functor cell containing \a funcName onto the heap and set registerAi to an STR cell pointing to that functor cell. Continue execution with the following instruction.
 \param funcName name of the functor being called
 \param arity arity of the functor
 \param variableIdx index on the heap
+\param h pointer to a \ref HEAP item
  */
 void put_structure(HEAP* h, char *funcName, int airty, int variableIdx) {
     int index = h->index;
@@ -29,12 +30,13 @@ void put_structure(HEAP* h, char *funcName, int airty, int variableIdx) {
 }
 
 /*! 
-\fn set_variable(int variableIdx)
+\fn set_variable(HEAP* h, int variableIdx)
 \author Brian Brietzke
 \addtogroup M0
 \brief Push a new unbound REF cell onto the heap and copy it into variable \a variableIdx. Continue execution with the following instruction.
+\param h pointer to a \ref HEAP item
 \param variableIdx index on the heap
-\bug missing the handling of variables
+\todo missing the handling of variables
  */
 void set_variable(HEAP* h, int variableIdx) {
     int index = h->index;
@@ -46,10 +48,11 @@ void set_variable(HEAP* h, int variableIdx) {
 }
 
 /*! 
-\fn set_value(int variableIdx)
+\fn set_value(HEAP* h, int variableIdx)
 \author Brian Brietzke
 \addtogroup M0
 \brief Push \a variableIdx value onto the heap. Continue execution with the following instruction.
+\param h pointer to a \ref HEAP item
 \param variableIdx index on the heap
  */
 void set_value(HEAP* h, int variableIdx) {
