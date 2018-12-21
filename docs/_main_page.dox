@@ -1,8 +1,8 @@
-
-_prolog is an attempt at porting the the [Prolog](https://en.wikipedia.org/wiki/Prolog) 
-language to something that can run on modern and not so modern [µControllers](https://en.wikipedia.org/wiki/Microcontroller).
-
-## Why?
+/*! 
+\mainpage _Prolog Documentation
+\brief _prolog is an attempt at porting the the [Prolog](https://en.wikipedia.org/wiki/Prolog) language to something that can run on modern and not so modern [µControllers](https://en.wikipedia.org/wiki/Microcontroller).
+\tableofcontents
+\section main_why Why?
 The idea does seem more than a little crazy, I'll be the first to admit it. 
 
 Given Prolog's nature as a rules based nature, where as a developer or engineer assigns _facts_ and creates _rules_ which are 
@@ -28,9 +28,4 @@ and installed on millions of devices.  C is comparatively easy programming langu
 popular languages out in the wild today.
 
 But does that means it's the best?
-
-## Comparisons
-Lets stick with example of controlling heat for a closed-system with limited ventilation.  This could be the inside of a computer case or an industrial controller in a manufacturing plant.  
-
-With such a system you will have the device that is being monitored (i.e. processor or relay bank) along with a one or more
-temperature sensors, one or more fans, zero or more visual indicators and zero or more remote notifiers.
+*/

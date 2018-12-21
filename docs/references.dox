@@ -1,0 +1,17 @@
+/*! 
+\page References
+\brief Reference Documentation and Projects
+\tableofcontents
+\section ref_docs Technical Documents
+- [Warren's Abstract Machine: A Tutorial Reconstruction](http://wambook.sourceforge.net/)
+- [Artificial Intelligence through Prolog](http://faculty.nps.edu/ncrowe/book/book.html)
+\section ref_proj Accepted Projects
+- [SWI-Prolog](http://www.swi-prolog.org/)
+- [GNUProlog](http://www.gprolog.org/)
+\section ref_gith Github Projects
+- [flex & bison (Lexical Analysis and Parsing)](https://github.com/ifding/flex-bison)
+- [Prolog interpreter made with Flex/Bison for compilers class](https://github.com/matheuscscp/hello-prolog)
+- [BinProlog](https://github.com/ptarau/binprolog)
+- [Prolog Interpreter Based on Warren Abstract Machine in C](https://github.com/ranxian/cwam)
+- [Experiments with WAM in C programming language](https://github.com/przemko/prolog-c-WAM)
+*/

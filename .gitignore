@@ -1,4 +1,6 @@
 
+
+.vscode
 # Created by https://www.gitignore.io/api/c,osx,autotools,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=c,osx,autotools,visualstudiocode
 
@@ -145,3 +147,10 @@ Temporary Items
 # End of https://www.gitignore.io/api/c,osx,autotools,visualstudiocode
 
 site/
+Makefile
+src/.deps/
+config.h
+
+src/_prolog_lexer.c
+src/_prolog_parser.c
+src/_prolog_parser.h

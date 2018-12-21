@@ -1,0 +1,45 @@
+
+.PHONY: clean
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Darwin)
+AM := /usr/local/bin/automake
+AC := /usr/local/bin/autoconf
+AL := /usr/local/bin/aclocal
+AH := /usr/local/bin/autoheader
+endif
+
+ifeq ($(UNAME), Linux)
+AM := /usr/bin/automake
+AC := /usr/bin/autoconf
+AL := /usr/bin/aclocal
+AH := /usr/bin/autoheader
+
+$(AH):
+	sudo apt-get -y install autotools-dev
+
+$(AM):
+	sudo apt-get -y install automake
+
+$(AC):
+	sudo apt-get -y install autoconf
+endif
+
+
+all: Makefile
+	./configure
+
+Makefile: $(AM) configure 
+	automake --add-missing
+
+configure: $(AC) $(AL) autom4te.cache config.h.in 
+	autoconf
+
+config.h.in: $(AH)
+	autoheader
+
+autom4te.cache: $(AL)
+	aclocal
+
+clean:
+	git clean -xfd
